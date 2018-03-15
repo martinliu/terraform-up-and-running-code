@@ -1,13 +1,13 @@
 terraform {
-  required_version = ">= 0.8, < 0.9"
+  required_version = ">= 0.8, < 0.11.4"
 }
 
 provider "aws" {
-  region = "us-east-1"
+  region = "ap-northeast-1"
 }
 
 resource "aws_instance" "example" {
-  ami                    = "ami-40d28157"
+  ami                    = "ami-48630c2e"
   instance_type          = "t2.micro"
   vpc_security_group_ids = ["${aws_security_group.instance.id}"]
 
